@@ -43,7 +43,6 @@
     <Compile Include="AssemblyCreator.cs" />
     <Compile Include="dynamicHelper.cs" />
     <Compile Include="iMethod.cs" />
-    <Compile Include="iMethodParam.cs" />
     <Compile Include="iModule.cs" />
     <Compile Include="iModuleProperty.cs" />
     <Compile Include="Module.cs" />
@@ -53,6 +52,9 @@
     <Compile Include="ModulePropertyFactory.cs" />
     <Compile Include="ModuleRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

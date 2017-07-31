@@ -31,6 +31,7 @@ namespace UnitTestProject1
             // initialize repositories
             ModuleFactory.SetModuleRepository(ModuleRepository);
             ModulePropertyFactory.SetModuleRespoitory(ModuleRepository);
+            ModuleMethodFactory.SetModuleRepository(ModuleRepository);
 
             ModuleFactory.CreateModule("Authenticate");
 
@@ -47,34 +48,26 @@ namespace UnitTestProject1
             {
                 var Print = new Action(() => { Console.WriteLine("Hellooo!!!"); });
 
-                var t = ModuleRepository.GetExpando(d);
-
-                if (t != null)
-                {
-                    dynamicHelper.AddAction(t, Print, "Print");
-                }
-
+               
                 Action<int> PrintInt = input => Console.WriteLine(input.ToString());
 
-                var t1 = ModuleRepository.GetExpando(d);
+                ModuleMethodFactory.CreateAction(d, Print, "Print");
 
-                if (t1 != null)
-                {
-                    dynamicHelper.AddAction(t, PrintInt, "Printint");
-                }
 
-                Assert.IsTrue(dynamicHelper.ContainsProperty(t, "ApiUrl", "string"));
 
-                Assert.IsTrue(dynamicHelper.ContainsAction(t, "Print"));
+                Assert.IsTrue(ModuleRepository.ContainsProperty(d, "ApiUrl", "string"));
 
-                Assert.IsTrue(dynamicHelper.ContainsAction(t, "Printint"));
+                Assert.IsTrue(ModuleRepository.ContainsAction(d, "Print"));
+
+                Assert.IsFalse(ModuleRepository.ContainsAction(d, "Printint"));
 
                 var funct = new Func<string>(() => { return "funct"; });
 
+                ModuleMethodFactory.CreateMethod(d, funct, "getString", "string");
 
-                dynamicHelper.AddMethod(t, funct, "getString");
+                //dynamicHelper.AddMethod(t, funct, "getString");
 
-                Assert.IsTrue(dynamicHelper.ContainsMethod(t, "getString", "string"));
+                Assert.IsTrue(ModuleRepository.ContainsMethod(d, "getString", "string"));
             }
 
         }

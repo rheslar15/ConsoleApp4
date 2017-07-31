@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ClassLibraryModule.Module">
+    <Position X="7.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAgAAAAAAAAAAAAACAAAIAAAAAAA=</HashCode>
+      <FileName>Module.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ClassLibraryModule.ModuleFactory">
+    <Position X="9.75" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAQAAAAIAAAAAABAAAAAACAAAAAE=</HashCode>
+      <FileName>ModuleFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibraryModule.ModuleRepository">
+    <Position X="12.5" Y="1" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAIBAAAEAQAEAACAAAAAAgAAAAAAA=</HashCode>
+      <FileName>ModuleRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibraryModule.dynamicHelper">
+    <Position X="15.5" Y="1" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAABAEAAAEAACAAIAAAAAAAgAAA=</HashCode>
+      <FileName>dynamicHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibraryModule.ModulePropertyFactory">
+    <Position X="7.5" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgQAAAAk=</HashCode>
+      <FileName>ModulePropertyFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibraryModule.ModuleMethodFactory">
+    <Position X="8" Y="6.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIEAQAgAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>ModuleMethodFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ClassLibraryModule.iModule">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>iModule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ClassLibraryModule.iModuleProperty">
+    <Position X="5.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAABAAAA=</HashCode>
+      <FileName>iModuleProperty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ClassLibraryModule.iMethod">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>iMethod.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

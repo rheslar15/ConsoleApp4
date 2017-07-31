@@ -27,6 +27,99 @@ namespace ClassLibraryModule
             return null;
         }
 
+        public bool ContainsProperty(iModule module, string PropertyName, string type)
+        {
+
+            if (Modules != null)
+            {
+                var Module = GetModuleByName(module.ModuleName);
+
+
+                if (Module != null)
+                {
+                    var t = (IDictionary<string, object>)(Module as Module).GetExpando();
+
+                    if (t != null)
+                    {
+                        var contians = dynamicHelper.ContainsProperty(t, PropertyName, type);
+
+                        return contians;
+                    }
+                }
+                
+            }
+            return false;
+        }
+
+        public bool ContainsAction(iModule module, string ActionName)
+        {
+
+            if (Modules != null)
+            {
+                var Module = GetModuleByName(module.ModuleName);
+
+
+                if (Module != null)
+                {
+                    var t = (IDictionary<string, object>)(Module as Module).GetExpando();
+
+                    if (t != null)
+                    {
+                        var contians = dynamicHelper.ContainsAction(t, ActionName);
+
+                        return contians;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool ContainsMethod(iModule module, string methodname, string type)
+        {
+            if (Modules != null)
+            {
+                var Module = GetModuleByName(module.ModuleName);
+
+
+                if (Module != null)
+                {
+                    var t = (IDictionary<string, object>)(Module as Module).GetExpando();
+
+                    if (t != null)
+                    {
+                        var contians = dynamicHelper.ContainsMethod(t, methodname, type);
+
+                        return contians;
+                    }
+                }
+
+            }
+            return false;
+        }
+
+        public bool ContainsAction(string ModuleName, string ActionName)
+        {
+
+            if (Modules != null)
+            {
+                var Module = GetModuleByName(ModuleName);
+
+
+                if (Module != null)
+                {
+                    var t = (IDictionary<string, object>)(Module as Module).GetExpando();
+
+                    if (t != null)
+                    {
+                        var contians = dynamicHelper.ContainsAction(t, ActionName);
+
+                        return contians;
+                    }
+                }
+            }
+            return false;
+        }
+
         public bool ContainsProprty(string ModuleName, string PropertyName)
         {
             if (Modules != null)

@@ -10,6 +10,6 @@ namespace ClassLibraryModule
         string MethodName { get; set; }
         string MethodReturnType { get; set; }
 
-        Dictionary<string, iMethodParam> Params { get; set; }
+        
     }
 }
